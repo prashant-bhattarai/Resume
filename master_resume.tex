@@ -1,0 +1,210 @@
+%-------------------------------------------------------------------------------
+% MASTER RESUME — Prashant Bhattarai
+% ATS-safe, single-column, 1-page, A4.
+% Based on the widely-used "Jake's Resume" structure (proven ATS parser
+% compatibility): no tables-as-layout, no icons/images, no multi-column body,
+% plain-text contact line, standard section headers.
+%
+% HOW TO USE THIS FILE
+%   - This is the MASTER bank: keep every bullet you might ever need here.
+%   - Comment out (add %) any \resumeItem / \resumeSubheading block you don't
+%     need for a specific application instead of deleting it, so nothing is lost.
+%   - PROJECTS section currently has placeholder entries — replace with your
+%     real projects (2-3 is ideal). Delete the placeholder comments once filled.
+%   - Keep to 1 page: if you go over, cut the WEAKEST bullet, not the newest.
+%-------------------------------------------------------------------------------
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% ---- A4 geometry, tight but readable margins ----
+\addtolength{\oddsidemargin}{-0.55in}
+\addtolength{\evensidemargin}{-0.55in}
+\addtolength{\textwidth}{1.1in}
+\addtolength{\topmargin}{-0.98in}
+\addtolength{\textheight}{2.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% ---- Section formatting ----
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensures PDF text is copy/parse-able (not outlined) — critical for ATS
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=\textbullet]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Prashant Bhattarai} \\ \vspace{3pt}
+    \small
+    Starkville, MS ~$|$~
+    \href{mailto:prashantbhattarai224@gmail.com}{prashantbhattarai224@gmail.com} ~$|$~
+    +1~662~518~1958 ~$|$~
+    \href{https://prashant-bhattarai.github.io}{prashant-bhattarai.github.io}
+    % Add LinkedIn / GitHub here once you send them, e.g.:
+    % ~$|$~ \href{https://linkedin.com/in/USERNAME}{linkedin.com/in/USERNAME}
+    % ~$|$~ \href{https://github.com/USERNAME}{github.com/USERNAME}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Mississippi State University}{Starkville, MS}
+    {B.S. in Mechanical Engineering; GPA: 4.00/4.00}{Expected May 2028}
+    \resumeItemListStart
+      \resumeItem{Judy and Bobby Shackouls Honors College; President's List (all semesters)}
+      % Optional add-on once decided: relevant coursework line, e.g.
+      % \resumeItem{Relevant Coursework: Dynamics, Controls, Mechatronics, Programming for Engineers}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+  \resumeSubheading
+    {Undergraduate Researcher}{Jan 2026 -- Present}
+    {Center for Advanced Vehicular Systems (CAVS), Mississippi State University}{Starkville, MS}
+    \resumeItemListStart
+      \resumeItem{Leading a UAV-assisted map recovery project for autonomous ground vehicles; deployed ROS2 Nav2 with DLIO-based LiDAR-IMU SLAM on a Jetson-powered RC platform, achieving an 80\% navigation recovery rate across 40 simulation trials}
+      \resumeItem{Developing a perception-based leader-follower multi-vehicle system fusing camera, LiDAR, and IMU data, progressing from ArUco tracking to ML-based vehicle detection}
+      \resumeItem{Designed and 3D-printed sensor/compute mounts for RC research platforms (Jetson, LiDAR, IMU, camera) using SolidWorks and DFM principles}
+      \resumeItem{Benchmarked decentralized multi-agent navigation architectures against a centralized M*-based Conflict-Based Search (CBS) algorithm in ROS2/MAVS simulation for path efficiency and inter-agent latency}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Undergraduate Research Assistant}{Aug 2025 -- Nov 2025}
+    {Industrial \& Systems Engineering, Mississippi State University}{Starkville, MS}
+    \resumeItemListStart
+      \resumeItem{Designed and fabricated structural components and lattice structures via FDM, resin, and metal AM for ceramic nanocomposite research improving fracture toughness (Buried Combustion Method)}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Product Design Research Intern}{Jun 2025 -- Aug 2025}
+    {USDA REEU -- AI2F Summer Research Program, Mississippi State University}{Starkville, MS}
+    \resumeItemListStart
+      \resumeItem{Led end-to-end mechanical design and prototyping of a portable AI-enabled device, creating CAD models and assemblies across multiple hardware iterations}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Undergraduate Research Assistant}{Feb 2025 -- Apr 2025}
+    {ISTVS Student Chapter, Mississippi State University}{Starkville, MS}
+    \resumeItemListStart
+      \resumeItem{Investigated and benchmarked GPS-only vs.\ GPS/IMU sensor fusion localization on a Polaris MRZR in off-road environments; collected, cleaned, and analyzed positioning data}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Computer Vision \& Robotics Perception} $|$ \emph{C++, OpenCV}}{}
+    \resumeItemListStart
+      \resumeItem{Developed a C++ spatial perception pipeline for AMR docking (Fiducial Docking System), using OpenCV's solvePnP on multi-marker ArUco grids for robust real-time 6-DoF pose estimation that stays locked even under heavy occlusion, fused with a custom 6-state Kalman filter to eliminate 3D tracking jitter}
+      \resumeItem{Built a vision-based industrial safety interlock (Intrusion Detection) using MOG2 background subtraction, morphological noise filtering, and image-moment centroid tracking, cutting processed pixel area over 60\% while resisting lighting-based false alarms}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Synthetic Data Generation \& Sim-to-Real Object Detection} $|$ \emph{NVIDIA Isaac Sim, YOLO11, Python, ROS2}}{Ongoing}
+    \resumeItemListStart
+      \resumeItem{Built a synthetic-data generation pipeline in NVIDIA Isaac Sim Replicator and trained a YOLO11s detector for fallen cardboard boxes (0.99 validation mAP50-95); diagnosed a sim-to-real generalization gap from testing against real photos and am iterating on the dataset while building a ROS2 node for real-time inference}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Non-Linear Model Predictive Control (MPC) for Cart-Pole System} $|$ \emph{Python, NumPy, CasADi}}{Ongoing}
+    \resumeItemListStart
+      \resumeItem{Derived non-linear state-space dynamics for an inverted pendulum from first-principles Newtonian mechanics and built a custom RK4 physics simulation engine in Python for high-fidelity state prediction}
+      \resumeItem{Formulated a discrete-time non-linear MPC controller in CasADi to solve constrained real-time optimization, enforcing state/input limits (motor torque, track length) for eventual hardware deployment}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.0in, label={}]
+    \small{\item{
+     \textbf{Autonomy \& Robotics}{: ROS2, Nav2 Path Planning, LiDAR-IMU SLAM (DLIO), Sensor Fusion (Camera/LiDAR/IMU), Multi-Agent Path Planning (M*, CBS), Perception-Based Tracking (ArUco, ML-Based Detection), MAVS Simulation} \\
+     \textbf{CAD \& Systems Integration}{: SolidWorks (CSWP), Fusion 360, GD\&T, Engineering Drawings, Sensor/Compute Packaging (Jetson, LiDAR, IMU, Camera)} \\
+     \textbf{Manufacturing \& Analysis}{: 3D Printing (FDM/Resin/Metal), CNC/CAM, Sheet Metal, FEA, DFM, Rapid Prototyping} \\
+     \textbf{Programming \& Systems}{: Python, C, C++, Linux, Windows}
+    }}
+ \end{itemize}
+
+%-----------LEADERSHIP \& ACTIVITIES-----------
+\section{Leadership \& Activities}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Co-Lead, Vehicle Hardware Integration -- MSU EcoCAR Innovation Challenge Team}{Aug 2026 -- Present}
+    {}{}
+    \resumeItemListStart
+      \resumeItem{Co-lead the Vehicle Hardware Integration subteam, physically integrating vehicle systems and components (sensors, wiring, mounts, electronics) into the EcoCAR platform in Siemens NX; building a GitLab-based version control workflow for the team's shared CAD files, since NX's native version control isn't compatible with the university's HPC setup}
+    \resumeItemListEnd
+  \resumeSubheading
+    {Chief of Additive Manufacturing -- Advanced Manufacturing Society}{Feb 2025 -- Present}
+    {}{}
+    \resumeItemListStart
+      \resumeItem{Lead hands-on workshops in additive manufacturing, 3- and 5-axis CNC machining, milling, lathe work, FEA, and CAD; hold CSWA (Mechanical Design), CSWA (Additive Manufacturing), and CSWP certifications}
+    \resumeItemListEnd
+  \resumeSubheading
+    {Vice President -- International Society for Terrain-Vehicle Systems (ISTVS)}{Apr 2025 -- Present}
+    {}{}
+    \resumeItemListStart
+      \resumeItem{Lead membership and research engagement initiatives; collaborating with Virginia Tech and the University of Pretoria on the society's first-ever student competition in wheel and tracked vehicle design -- designing a wheel in CAD and simulating it in YADE DEM to optimize the result}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+\end{document}
